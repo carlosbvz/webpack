@@ -45,7 +45,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	document.write("It works.");
+	__webpack_require__(5)
+	__webpack_require__(6)
+	document.write("It works, not reloading.");
 
 
 /***/ },
@@ -395,6 +397,28 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	console.log('logger.js');
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var checkName = function checkName(firstName, lastName) {
+	  if (firstName !== 'nader' || lastName !== 'dabit') {
+	    console.log('You are not Nader Dabit');
+	  } else {
+	    console.log('You are Nader Dabit');
+	  }
+	};
+
+	checkName('nader', 'jackson');
 
 /***/ }
 /******/ ]);
